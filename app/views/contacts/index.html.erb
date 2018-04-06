@@ -1,0 +1,19 @@
+<h1>Listing Contacts</h1>
+<%= link_to 'New Contact', new_contact_path %>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Number</th>
+    </tr>
+    
+    <% @contacts.each do |contact| %>
+    
+        <tr>
+            <td><%= contact.name %></td>
+            <td><%= contact.number %></td>
+            <td><%= link_to 'Show', contact_path(contact) %></td>
+            
+        </tr>
+    
+    <% end %>
+</table>
