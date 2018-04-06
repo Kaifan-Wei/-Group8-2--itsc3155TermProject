@@ -1,4 +1,4 @@
-<h1>Listing Contacts</h1>
+<h3>Listing Contacts</h3>
 <%= link_to 'New Contact', new_contact_path %>
 <table>
     <tr>
@@ -11,8 +11,7 @@
         <tr>
             <td><%= contact.name %></td>
             <td><%= contact.number %></td>
-            <td><%= link_to 'Show', contact_path(contact) %></td>
-            
+            <td><%= link_to 'Details', contact_path(contact) %></td>
         </tr>
     
     <% end %>
