@@ -1,17 +1,21 @@
 class ContactsController < ApplicationController
     def index
+        @user = User.find(params[:user_id])
         @contacts = Contact.all
     end
     
     def new
+        @user = User.find(params[:user_id])
         @contact = Contact.new
     end
     
     def show
+        @user = User.find(params[:user_id])
         @contact = Contact.find(params[:id])
     end
     
     def create
+        @user = User.find(params[:user_id])
         @contact = Contact.new(contact_params)
         if @contact.save
             redirect_to @contact
@@ -21,10 +25,12 @@ class ContactsController < ApplicationController
     end
     
     def edit
+        @user = User.find(params[:user_id])
         @contact = Contact.find(params[:id])
     end
     
     def update
+        @user = User.find(params[:user_id])
         @contact = Contact.find(params[:id])
         if @contact.update(contact_params)
             redirect_to @contact
