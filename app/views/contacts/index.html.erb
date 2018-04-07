@@ -6,12 +6,16 @@
         <th>Number</th>
     </tr>
     
-    <% @contacts.each do |contact| %>
+    <% @users.contacts.each do |contact| %>
     
         <tr>
             <td><%= contact.name %></td>
             <td><%= contact.number %></td>
             <td><%= link_to 'Details', contact_path(contact) %></td>
+            <td><%= link_to 'Delete', 
+                                        contact_path(contact),
+                                        method: :delete, 
+                                        data: {confirm: 'Are you sure?'} %></td>
         </tr>
     
     <% end %>
