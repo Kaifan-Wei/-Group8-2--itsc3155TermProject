@@ -13,6 +13,7 @@ h2{
     font-size: 36px;
     font-weight: bold;
     color: #8f939b;
+    text-align: center;
 }
 
 #error_message {
@@ -24,4 +25,23 @@ h2{
 #error_explanation {
     font-size: 15;
     color: red;
+}
+
+p{
+  text-align: center;   
+}
+
+table {
+    width: 30%;
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+}
+
+tr:hover {background-color: #f5f5f5;}
+
+th, td {
+    border-bottom: 1px solid #ddd;
 }
