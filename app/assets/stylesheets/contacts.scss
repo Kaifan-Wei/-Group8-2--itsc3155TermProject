@@ -40,8 +40,30 @@ th {
     text-align: left;
 }
 
-tr:hover {background-color: #58e28b;}
+tr:hover {background-color: MediumSeaGreen;}
 
 th, td {
     border-bottom: 1px solid #ddd;
 }
+
+input[type=button], input[type=submit] {
+    background-color: #518be8;
+    border: none;
+    color: white; 
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 15px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=text] {
+    padding: 5px 5px;
+    border: 2px solid #ccc;
+    background-color: white;
+}
+

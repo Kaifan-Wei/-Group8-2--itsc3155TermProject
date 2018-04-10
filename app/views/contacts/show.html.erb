@@ -3,18 +3,20 @@
 </h2>
 
 <p>
-    <strong>Number: </strong>
-    <%= @contact.number %>
-<br>
-
-
-    <strong>Address: </strong>
-    <%= @contact.address %>
-<br>
-
-    <strong>email: </strong>
-    <%= @contact.email %>
-</p><br>
+    <table align="center">
+        <tr>
+            <th>Number: </th>
+            <td><%= @contact.number %></td>
+        </tr>
+        <tr>
+            <th>Address: </th>
+            <td><%= @contact.address %></td>
+        </tr>
+        <tr>
+            <th>Email: </th>
+            <td><%= @contact.email %></td>
+        </tr>
+    </table>
 
 <p>
 <%= link_to 'Edit', edit_contact_path %><br>
