@@ -1,8 +1,12 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ubuntu|Lobster|Amatic+SC|Gugi|Stylish" rel="stylesheet">
+</head>
+
 <h3>Listing Contacts</h3>
 
-<p><%= link_to 'New Contact', new_contact_path %></p>
+<p id="new_con"><%= link_to 'New Contact', new_contact_path %></p>
 
-<div style="overflow-y:auto;">
+<div id="con_chart" style="overflow-y:auto;">
     <table align="center">
         <tr>
             <th>Name</th>
