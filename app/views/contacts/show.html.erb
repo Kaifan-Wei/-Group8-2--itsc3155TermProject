@@ -1,20 +1,8 @@
-<h2>
-    <%= @contact.name %>
-</h2>
+<h3>Here's your new contact</h3>
 
-<p2>
-    <strong>Number: </strong>
-    <%= @contact.number %>
-</p2><br>
+<%= render 'form' %>
 
-<p2>
-    <strong>Address: </strong>
-    <%= @contact.address %>
-</p2><br>
-
-<p2>
-    <strong>email: </strong>
-    <%= @contact.email %>
-</p2><br>
-
+<p>
+<%= link_to 'Edit', edit_contact_path %><br>
 <%= link_to 'Back', contacts_path %>
+</p>

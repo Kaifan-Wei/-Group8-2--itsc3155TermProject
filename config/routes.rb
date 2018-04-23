@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'auth/:provide/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy'
+
+  resources :sessions, only: [:create, :destroy]
   get 'welcome/index'
 <<<<<<< HEAD
 
