@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   get 'welcome/index'
   
-    resources :contacts
+    resources :contacts do
+      resources :maps
+    end
 
   root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
