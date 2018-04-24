@@ -5,6 +5,13 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create, :destroy]
   get 'welcome/index'
+<<<<<<< HEAD
+
+  resources :users do
+    resources :contacts
+  end
+=======
+>>>>>>> b7da40c3b35e29e1e025909eafb1b5316f4a7e35
   
     resources :contacts do
       resources :maps
