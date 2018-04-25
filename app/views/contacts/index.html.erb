@@ -2,29 +2,34 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ubuntu|Lobster|Amatic+SC|Gugi|Stylish" rel="stylesheet">
 </head>
 
-<h3>Listing Contacts</h3>
+<h3>Contacts List</h3>
 
 <p id="new_con"><%= link_to 'New Contact', new_contact_path %></p>
 
-<div id="con_chart" style="overflow-y:auto;">
-    <table align="center">
-        <tr>
-            <th>Name</th>
-            <th>Number</th>
-            <th>Actions</th>
-        </tr>
-        
-        <% @contacts.each do |contact| %>
-        
-            <tr>
-                <td><%= link_to contact.name, edit_contact_path(contact) %></td>
-                <td><%= contact.number %></td>
-                <td><%= link_to 'Delete', 
-                                            contact_path(contact),
-                                            method: :delete, 
-                                            data: {confirm: 'Are you sure?'} %></td>
-            </tr>
-        
-        <% end %>
-    </table>
-</div>
+<% if @contacts.exists? %>
+  <div id="con_chart" style="overflow-y:auto;">
+      <table align="center">
+          <tr>
+              <th>Name</th>
+              <th>Number</th>
+              <th>Actions</th>
+          </tr>
+
+          <% @contacts.each do |contact| %>
+
+              <tr>
+                  <td><%= link_to contact.name, edit_contact_path(contact) %></td>
+                  <td><%= contact.number %></td>
+                  <td><%= link_to 'Delete',
+                                              contact_path(contact),
+                                              method: :delete,
+                                              data: {confirm: 'Are you sure?'} %></td>
+              </tr>
+
+          <% end %>
+      </table>
+  </div>
+<% else %>
+  <p id="empty_message">Imagine that you have zero cookies and you split them evenly among zero friends. <br>How many cookies does each person get?<br> See? It doesn’t make sense. <br>And Cookie Monster is sad that there are no cookies, <br>and you are sad that you have no friends.<br>
+  :(</p>
+<% end %>
