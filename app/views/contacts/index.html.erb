@@ -4,6 +4,10 @@
 
 <h3>Contacts List</h3>
 
+<% if !@contacts.exists? %>
+  <p id="empty_message">Do you have no friends?<br>:(</p>
+<% end %>
+
 <p id="new_con"><%= link_to 'New Contact', new_contact_path %></p>
 
 <% if @contacts.exists? %>
@@ -25,10 +29,7 @@
                                               method: :delete,
                                               data: {confirm: 'Are you sure?'} %></td>
               </tr>
-
           <% end %>
       </table>
   </div>
-<% else %>
-  <p id="empty_message">Do you have no friends?<br>:(</p>
 <% end %>

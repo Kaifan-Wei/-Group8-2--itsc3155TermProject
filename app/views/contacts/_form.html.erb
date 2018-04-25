@@ -3,12 +3,11 @@
 </head>
 <div id='form' class="center-div" >
   <%= form_for @contact do |f| %>
-   
+
     <% if @contact.errors.any? %>
       <div id="error_explanation">
-        <h2>
-          <%= pluralize(@contact.errors.count, "error") %> prohibited
-          this contact from being saved:
+        <h2 id="error_head">
+          Nope, you made <%= pluralize(@contact.errors.count, "mistake") %>
         </h2>
         <ul>
           <% @contact.errors.full_messages.each do |msg| %>
@@ -17,27 +16,27 @@
         </ul>
       </div>
     <% end %>
-   
+
     <p>
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </p>
-   
+
     <p>
       <%= f.label :number %><br>
       <%= f.text_field :number %>
     </p>
-   
+
     <p>
       <%= f.label :address %><br>
       <%= f.text_field :address %>
     </p>
-    
+
     <p>
       <%= f.label :email %><br>
       <%= f.text_field :email %>
     </p>
-   
+
     <p>
       <%= f.submit %>
     </p>
