@@ -3,16 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h3{
-    font-size: 48px;
+    font-size: 72px;
     font-weight: bold;
     color: MediumSeaGreen;
     text-align: center;
+    font-family: 'Lobster', cursive;
+
 }
 
 h2{
     font-size: 36px;
     font-weight: bold;
     color: #8f939b;
+    text-align: center;
 }
 
 #error_message {
@@ -24,4 +27,80 @@ h2{
 #error_explanation {
     font-size: 15;
     color: red;
+}
+
+#error_head {
+  font-size: 18;
+  color: grey;
+  font-weight: bold;
+}
+
+p{
+  text-align: center;
+}
+
+table {
+    width: 30%;
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+}
+
+tr:hover {background-color: MediumSeaGreen;}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+input[type=button], input[type=submit] {
+    background-color: MediumSeaGreen;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 16px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+input[type=text] {
+    padding: 5px 5px;
+    border: 2px solid #ccc;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#form {
+    text-align: center;
+    font-family: 'Stylish', sans-serif;
+
+}
+
+iframe {
+    text-align: center;
+}
+
+#con_chart {
+    font-family: 'Stylish', sans-serif;
+}
+
+#new_con {
+    font-family: 'Gugi', cursive;
+}
+
+#map{
+    align: center;
+}
+
+#empty_message {
+  text-align: center;
+  font-family: 'Stylish', sans-serif;
+  font-size: 20px;
 }

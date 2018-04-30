@@ -1,2 +1,18 @@
-<h1>Welcome to Connect! </h1>
-<%= link_to 'My Contacts', controller: 'contacts' %>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ubuntu|Lobster|Amatic+SC|Gugi|Permanent+Marker" rel="stylesheet">
+</head>
+
+<title>Welcome!</title>
+
+<h1>Connect</h1>
+<p id="intro">
+    Make your contacts easier!
+</p>
+
+<div id="index_signin">
+    <% if !current_user %>
+        <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+    <% else %>
+        <%= link_to 'My Contacts', controller: 'contacts' %></p>
+    <% end %>
+</div>
