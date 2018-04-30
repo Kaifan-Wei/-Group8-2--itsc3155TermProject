@@ -6,11 +6,13 @@
 
 <% if !@contacts.exists? %>
   <p id="empty_message">Do you have no friends?<br>:(</p>
+  <p id="empty_new_con"><%= link_to 'Lets Get You a New Friend', new_contact_path %></p>
 <% end %>
 
-<p id="new_con"><%= link_to 'New Contact', new_contact_path %></p>
+
 
 <% if @contacts.exists? %>
+  <p id="new_con"><%= link_to 'New Contact', new_contact_path %></p>
   <div id="con_chart" style="overflow-y:auto;">
       <table align="center">
           <tr>
@@ -31,5 +33,6 @@
               </tr>
           <% end %>
       </table>
+
   </div>
 <% end %>
